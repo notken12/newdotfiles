@@ -1,0 +1,6 @@
+2022/06/17-19:39:53.993 72c Reusing MANIFEST /home/ken/.config/chromium/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/06/17-19:39:53.993 72c Recovering log #4
+2022/06/17-19:39:54.444 72c Reusing old log /home/ken/.config/chromium/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000004.log 
+2022/06/17-19:39:59.311 726 Level-0 table #8: started
+2022/06/17-19:39:59.404 726 Level-0 table #8: 2024004 bytes OK
+2022/06/17-19:39:59.442 726 Delete type=0 #4
