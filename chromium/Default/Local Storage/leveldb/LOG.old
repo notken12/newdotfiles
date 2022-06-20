@@ -1,6 +1,0 @@
-2022/06/20-00:42:44.322 3 Reusing MANIFEST /home/ken/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
-2022/06/20-00:42:44.649 3 Recovering log #88
-2022/06/20-00:42:44.958 3 Reusing old log /home/ken/.config/chromium/Default/Local Storage/leveldb/000088.log 
-2022/06/20-01:03:58.960 11 Level-0 table #93: started
-2022/06/20-01:03:59.079 11 Level-0 table #93: 20230 bytes OK
-2022/06/20-01:03:59.318 11 Delete type=0 #88
