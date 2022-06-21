@@ -14,7 +14,7 @@ return {
     -- Default code editor
     code_editor = "alacritty -e nvim",
     -- Default web browser
-    web_browser = "chromium",
+    web_browser = "/opt/google/chrome/google-chrome",
     -- Default file manager
     file_manager = "nautilus",
     -- Default network manager

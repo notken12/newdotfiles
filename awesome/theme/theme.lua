@@ -25,7 +25,7 @@ theme.xcolor4 = "#6791C9"
 theme.xcolor5 = "#BC83E3"
 theme.xcolor6 = "#67AFC1"
 theme.xcolor7 = "#D9D7D6"
-theme.xcolor8 = "#484E5B"
+theme.xcolor8 = "#C8CECB77"
 theme.xcolor9 = "#F16269"
 theme.xcolor10 = "#8CD7AA"
 theme.xcolor11 = "#E9967E"
@@ -33,8 +33,8 @@ theme.xcolor12 = "#79AAEB"
 theme.xcolor13 = "#C488EC"
 theme.xcolor14 = "#7ACFE4"
 theme.xcolor15 = "#E5E5E5"
-theme.darker_bg = "#0A1419"
-theme.lighter_bg = "#162026"
+theme.darker_bg = "#0A141999"
+theme.lighter_bg = "#16202644"
 theme.transparent = "#00000000"
 
 -- ░█▀▀░█▀█░█▀█░▀█▀░█▀▀
@@ -83,7 +83,7 @@ theme.titlebar_fg = theme.xforeground
 theme.titlebar_color_unfocused = theme.xcolor8
 
 -- Wibar
-theme.wibar_bg = "#0B161A"
+theme.wibar_bg = "#0B161A88"
 
 -- Dashboard
 theme.dashboard_bg = theme.darker_bg
@@ -102,7 +102,8 @@ theme.music_accent = theme.lighter_bg
 -- ░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀
 
 -- Wallpaper
-theme.wallpaper = gfs.get_configuration_dir() .. "theme/assets/wallpaper.png"
+-- theme.wallpaper = gfs.get_configuration_dir() .. "theme/assets/wallpaper.png"
+theme.wallpaper = nil
 
 -- Pfp
 theme.pfp = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/pfp.png")

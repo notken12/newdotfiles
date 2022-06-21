@@ -54,6 +54,8 @@ awful.screen.connect_for_each_screen(function(s)
 		end
 
 		gears.wallpaper.maximized(gears.surface.load_uncached(wallpaper), s, false, nil)
+  else 
+    os.execute('nitrogen --restore')
 	end
 end)
 
