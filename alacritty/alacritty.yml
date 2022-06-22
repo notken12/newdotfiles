@@ -37,10 +37,10 @@ env:
 
 window:
   opacity: 0.7
-  # dynamic_padding: true
-  # padding:
-  #   x: 8
-  #   y: 8
+  dynamic_padding: true
+  padding:
+    x: 8
+    y: 8
 
 font:
   normal:
@@ -73,11 +73,14 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
   save_to_clipboard: true
 
-# shell:
-#   program: /usr/bin/zsh
+shell:
+  program: /usr/bin/zsh
 
 cursor:
   style: Beam
 
 live_config_reload: true
 draw_bold_text_with_bright_colors: true
+
+key_bindings:
+  - { key: V, mods: Control, action: Paste }
