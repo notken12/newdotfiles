@@ -85,13 +85,14 @@ return function()
 
   local widget = wbutton.elevated.state({
     child = battery_widget,
-    normal_bg = beautiful.widget_bg .. "00",
+    normal_bg = beautiful.widget_bg_transparent,
     on_release = function()
       awful.spawn(apps.default.power_manager, false)
     end,
   })
 
   local last_value = 100
+  require("signal.battery").activate()
   awesome.connect_signal("signal::battery", function(value, state)
     battery_bar.value = value
     last_value = value

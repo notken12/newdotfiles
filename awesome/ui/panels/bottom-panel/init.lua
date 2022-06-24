@@ -114,7 +114,7 @@ return function(s)
     })
 
     local widget = widgets.button.elevated.state({
-      normal_bg = beautiful.widget_bg .. "77",
+      normal_bg = beautiful.widget_bg,
       normal_shape = gears.shape.rounded_bar,
       child = {
         taglist,
@@ -160,7 +160,7 @@ return function(s)
 
     local arrow = wbutton.text.state({
       text_normal_bg = beautiful.accent,
-      normal_bg = beautiful.widget_bg .. "00",
+      normal_bg = beautiful.widget_bg_transparent,
       font = beautiful.icon_font .. "Round ",
       size = 18,
       text = "",
@@ -194,7 +194,7 @@ return function(s)
 
     local widget = wbutton.elevated.state({
       child = icon,
-      normal_bg = beautiful.widget_bg .. "00",
+      normal_bg = beautiful.widget_bg_transparent,
       on_release = function()
         awesome.emit_signal("notification_panel::toggle", s)
       end,
@@ -231,7 +231,7 @@ return function(s)
 
     local widget = wbutton.elevated.state({
       child = s.mylayoutbox,
-      normal_bg = beautiful.widget_bg .. "00",
+      normal_bg = beautiful.widget_bg_transparent,
     })
 
     return widget

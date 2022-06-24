@@ -10,10 +10,18 @@ local info_panel = require(... .. ".panels.info-panel")
 local notification_panel = require(... .. ".panels.notification-panel")
 
 local awful = require("awful")
-awful.screen.connect_for_each_screen(function(s)
-	--- Panels
-	bottom_panel(s)
-	central_panel(s)
-	info_panel(s)
-	notification_panel(s)
+local gears = require("gears")
+
+awesome.connect_signal("startup", function()
+  awful.screen.connect_for_each_screen(function(s)
+    --- Panels
+    central_panel(s)
+    info_panel(s)
+    notification_panel(s)
+    gears.timer.start_new(0.0,
+      function()
+        bottom_panel(s)
+      end
+    )
+  end)
 end)

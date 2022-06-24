@@ -9,6 +9,7 @@ local playerctl_daemon = require("signal.playerctl")
 local machi = require("modules.layout-machi")
 local helpers = require("helpers")
 local apps = require("configuration.apps")
+local bottom_panel = require("ui.panels.bottom-panel")
 
 --- Make key easier to call
 --- ~~~~~~~~~~~~~~~~~~~~~~~
@@ -20,6 +21,9 @@ shift = "Shift"
 --- Global key bindings
 --- ~~~~~~~~~~~~~~~~~~~
 awful.keyboard.append_global_keybindings({
+  -- awful.key({ mod }, "w", function()
+  --   bottom_panel(awful.screen.focused())
+  -- end, { description = "open wibar", group = "app" }),
 
   --- App
   --- ~~~
@@ -29,9 +33,14 @@ awful.keyboard.append_global_keybindings({
   end, { description = "open terminal", group = "app" }),
 
   --- App launcher
-  awful.key({ mod }, "r", function()
+  awful.key({ alt }, "space", function()
     awful.spawn.with_shell(apps.default.app_launcher)
   end, { description = "open app launcher", group = "app" }),
+
+  --- Central panel
+  awful.key({ mod }, "a", function()
+    awesome.emit_signal("central_panel::toggle", awful.screen.focused())
+  end),
 
   --- Code editor
   awful.key({ mod, shift }, "e", function()
@@ -324,6 +333,7 @@ client.connect_signal("request::default_keybindings", function()
     awful.key({ alt }, "Tab", function()
       awesome.emit_signal("window_switcher::turn_on")
     end),
+
   })
 end)
 

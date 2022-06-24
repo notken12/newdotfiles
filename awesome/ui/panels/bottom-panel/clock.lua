@@ -21,7 +21,7 @@ return function(s)
 
   local widget = wbutton.elevated.state({
     child = clock,
-    normal_bg = beautiful.widget_bg .. "00",
+    normal_bg = beautiful.widget_bg_transparent,
     on_release = function()
       awesome.emit_signal("info_panel::toggle", s)
     end,

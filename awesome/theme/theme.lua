@@ -112,7 +112,8 @@ theme.press_event = "#ffffff" .. "15"
 theme.release_event = "#ffffff" .. "10"
 
 --- Widgets
-theme.widget_bg = "#162026"
+theme.widget_bg = "#16202677"
+theme.widget_bg_transparent = "#16202600"
 
 --- Titlebars
 theme.titlebar_enabled = true

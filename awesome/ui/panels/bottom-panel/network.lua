@@ -6,6 +6,7 @@ local beautiful = require("beautiful")
 local dpi = beautiful.xresources.apply_dpi
 local apps = require("configuration.apps")
 local wbutton = require("ui.widgets.button")
+local color = require("helpers.color");
 
 return function()
   local network = wibox.widget({
@@ -22,7 +23,7 @@ return function()
 
   local widget = wbutton.elevated.state({
     child = network,
-    normal_bg = beautiful.widget_bg .. "00",
+    normal_bg = beautiful.widget_bg_transparent,
     on_release = function()
       awful.spawn(apps.default.network_manager, false)
     end,
