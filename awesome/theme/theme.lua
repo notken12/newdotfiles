@@ -19,7 +19,7 @@ local helpers = require("helpers")
 theme.xforeground = "#D9D7D699"
 theme.darker_xbackground = "#000a0e99"
 theme.xbackground = "#06111599"
-theme.lighter_xbackground = "#0d181c99"
+theme.lighter_xbackground = "#0d181c33"
 theme.one_bg = "#131e2299"
 theme.one_bg2 = "#1c272b99"
 theme.one_bg3 = "#242f3399"
@@ -43,7 +43,7 @@ theme.xcolor10 = "#8CD7AA"
 
 --- Yellow
 theme.xcolor3 = "#DEAF78"
-theme.xcolor11 = "#E9A67E"
+theme.xcolor11 = "#E9C97F"
 
 --- Blue
 theme.xcolor4 = "#6791C9"
@@ -67,7 +67,7 @@ theme.xcolor15 = "#E5E5E5"
 
 --- Ui Fonts
 theme.font_name = "SF Pro "
-theme.font = theme.font_name .. "Medium 10"
+theme.font = theme.font_name .. "Medium 11"
 
 --- Icon Fonts
 theme.icon_font = "Material Icons "
@@ -117,7 +117,7 @@ theme.widget_bg_transparent = "#16202600"
 
 --- Titlebars
 theme.titlebar_enabled = true
-theme.titlebar_bg = "#061115"
+theme.titlebar_bg = "#06111599"
 theme.titlebar_fg = "#D9D7D6"
 
 --- Wibar
@@ -164,7 +164,8 @@ theme.snap_bg = theme.xcolor8
 theme.snap_shape = helpers.ui.rrect(0)
 
 --- Main Menu
-theme.main_menu_bg = theme.lighter_xbackground
+theme.main_menu_bg = "#0d181c66"
+theme.main_menu_bg_transparent = "#0d181c00"
 
 --- Tooltip
 theme.tooltip_bg = theme.lighter_xbackground

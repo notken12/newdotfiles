@@ -24,7 +24,7 @@ return function()
   local battery_bar = wibox.widget({
     max_value = 100,
     value = 50,
-    forced_width = dpi(30),
+    forced_width = dpi(32),
     border_width = dpi(1),
     paddings = dpi(2),
     bar_shape = helpers.ui.rrect(2),
@@ -73,7 +73,7 @@ return function()
 
   local battery_widget = wibox.widget({
     layout = wibox.layout.fixed.horizontal,
-    spacing = dpi(5),
+    spacing = dpi(2),
     {
       battery,
       top = dpi(1),
