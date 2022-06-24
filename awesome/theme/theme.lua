@@ -117,8 +117,8 @@ theme.widget_bg_transparent = "#16202600"
 
 --- Titlebars
 theme.titlebar_enabled = true
-theme.titlebar_bg = theme.xbackground
-theme.titlebar_fg = theme.xforeground
+theme.titlebar_bg = "#061115"
+theme.titlebar_fg = "#D9D7D6"
 
 --- Wibar
 theme.wibar_bg = "#0B161A99"
@@ -146,14 +146,15 @@ theme.icon_theme = "WhiteSur-dark"
 --- Borders
 theme.border_width = 0
 theme.oof_border_width = 0
-theme.border_color_marked = theme.titlebar_bg
-theme.border_color_active = theme.titlebar_bg
-theme.border_color_normal = theme.titlebar_bg
-theme.border_color_new = theme.titlebar_bg
-theme.border_color_urgent = theme.titlebar_bg
-theme.border_color_floating = theme.titlebar_bg
-theme.border_color_maximized = theme.titlebar_bg
-theme.border_color_fullscreen = theme.titlebar_bg
+theme.border_color = "#888888";
+theme.border_color_marked = theme.border_color
+theme.border_color_active = theme.border_color
+theme.border_color_normal = theme.border_color
+theme.border_color_new = theme.border_color
+theme.border_color_urgent = theme.border_color
+theme.border_color_floating = theme.border_color
+theme.border_color_maximized = theme.border_color
+theme.border_color_fullscreen = theme.border_color
 
 --- Corner Radius
 theme.border_radius = 12
