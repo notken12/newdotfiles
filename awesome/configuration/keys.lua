@@ -33,9 +33,14 @@ awful.keyboard.append_global_keybindings({
   end, { description = "open terminal", group = "app" }),
 
   --- App launcher
-  awful.key({ alt }, "space", function()
+  awful.key({ mod }, "space", function()
     awful.spawn.with_shell(apps.default.app_launcher)
   end, { description = "open app launcher", group = "app" }),
+
+  --- Emoji picker
+  awful.key({ mod }, ".", function()
+    awful.spawn.with_shell(apps.default.emoji_picker)
+  end, { description = "open emoji picker", group = "app" }),
 
   --- Central panel
   awful.key({ mod }, "a", function()
@@ -351,7 +356,7 @@ awful.keyboard.append_global_keybindings({
   end, { description = "set floating layout", group = "layout" }),
 
   --- Layout machi
-  awful.key({ mod }, ".", function()
+  awful.key({ mod }, ",", function()
     machi.default_editor.start_interactive()
   end, { description = "edit the current layout if it is a machi layout", group = "layout" }),
   awful.key({ mod }, "/", function()
@@ -393,8 +398,8 @@ awful.keyboard.append_global_keybindings({
 --- Move through workspaces
 --- ~~~~~~~~~~~~~~~~~~~~~~~
 awful.keyboard.append_global_keybindings({
-  awful.key({ mod, alt }, "Left", awful.tag.viewprev, { description = "view previous", group = "tags" }),
-  awful.key({ mod, alt }, "Right", awful.tag.viewnext, { description = "view next", group = "tags" }),
+  awful.key({ ctrl, mod }, "Left", awful.tag.viewprev, { description = "view previous", group = "tags" }),
+  awful.key({ ctrl, mod }, "Right", awful.tag.viewnext, { description = "view next", group = "tags" }),
   awful.key({
     modifiers = { mod },
     keygroup = "numrow",

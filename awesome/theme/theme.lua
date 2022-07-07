@@ -28,6 +28,7 @@ theme.grey_fg = "#3b464a"
 theme.grey_fg2 = "#455054"
 theme.light_grey = "#4f5a5e"
 theme.transparent = "#00000000"
+theme.dock_bg = theme.xbackground
 
 --- Black
 theme.xcolor0 = "#1C252C"
@@ -38,8 +39,8 @@ theme.xcolor1 = "#DF5B61"
 theme.xcolor9 = "#F16269"
 
 --- Green
-theme.xcolor2 = "#78B892"
-theme.xcolor10 = "#8CD7AA"
+theme.xcolor2 = "#88C882"
+theme.xcolor10 = "#8CD79A"
 
 --- Yellow
 theme.xcolor3 = "#DEAF78"
@@ -61,13 +62,45 @@ theme.xcolor14 = "#7ACFE4"
 theme.xcolor7 = "#D9D7D6"
 theme.xcolor15 = "#E5E5E5"
 
+-- --- Black
+-- theme.xcolor0 = "#1C252C"
+-- theme.xcolor8 = "#484E5B"
+--
+-- --- Red
+-- theme.xcolor1 = "#f7768e"
+-- theme.xcolor9 = "#ff7a93"
+--
+-- --- Green
+-- theme.xcolor2 = "#9ece6a"
+-- theme.xcolor10 = "#b9f27c"
+--
+-- --- Yellow
+-- theme.xcolor3 = "#e0af68"
+-- theme.xcolor11 = "#ff9e64"
+--
+-- --- Blue
+-- theme.xcolor4 = "#7aa2f7"
+-- theme.xcolor12 = "#7da6ff"
+--
+-- --- Magenta
+-- theme.xcolor5 = "#ad8ee6"
+-- theme.xcolor13 = "#bb9af7"
+--
+-- --- Cyan
+-- theme.xcolor6 = "#449dab"
+-- theme.xcolor14 = "#0db9d7"
+--
+-- --- White
+-- theme.xcolor7 = "#D9D7D6"
+-- theme.xcolor15 = "#E5E5E5"
+
 --- ░█▀▀░█▀█░█▀█░▀█▀░█▀▀
 --- ░█▀▀░█░█░█░█░░█░░▀▀█
 --- ░▀░░░▀▀▀░▀░▀░░▀░░▀▀▀
 
 --- Ui Fonts
-theme.font_name = "SF Pro "
-theme.font = theme.font_name .. "Medium 11"
+theme.font_name = "SF Mono "
+theme.font = theme.font_name .. "Regular 11"
 
 --- Icon Fonts
 theme.icon_font = "Material Icons "
@@ -90,17 +123,17 @@ theme.fg_minimize = theme.xcolor0
 
 --- Accent colors
 function theme.random_accent_color()
-  local accents = {
-    theme.xcolor9,
-    theme.xcolor10,
-    theme.xcolor11,
-    theme.xcolor12,
-    theme.xcolor13,
-    theme.xcolor14,
-  }
+	local accents = {
+		theme.xcolor9,
+		theme.xcolor10,
+		theme.xcolor11,
+		theme.xcolor12,
+		theme.xcolor13,
+		theme.xcolor14,
+	}
 
-  local i = math.random(1, #accents)
-  return accents[i]
+	local i = math.random(1, #accents)
+	return accents[i]
 end
 
 theme.accent = theme.xcolor4
@@ -134,7 +167,7 @@ theme.music_accent = theme.lighter_xbackground
 --- ░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀
 
 --- Image Assets
-theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/kanagawa.jpg")
+theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/bigsur.png")
 theme.pfp = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/pfp.png")
 theme.music = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/music.png")
 
@@ -145,8 +178,8 @@ theme.icon_theme = "WhiteSur-dark"
 
 --- Borders
 theme.border_width = 0
-theme.oof_border_width = 0
-theme.border_color = "#888888";
+-- theme.oof_border_width = 0
+theme.border_color = "#888888"
 theme.border_color_marked = theme.border_color
 theme.border_color_active = theme.border_color
 theme.border_color_normal = theme.border_color
@@ -240,10 +273,10 @@ theme.notif_center_notifs_bg_alt = theme.one_bg2
 
 --- Swallowing
 theme.dont_swallow_classname_list = {
-  "firefox",
-  "gimp",
-  "Google-chrome",
-  "Thunar",
+	"firefox",
+	"gimp",
+	"Google-chrome",
+	"Thunar",
 }
 
 --- Layout Machi

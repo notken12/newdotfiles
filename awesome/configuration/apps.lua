@@ -8,7 +8,7 @@ return {
     --- Default terminal emulator
     terminal = "alacritty",
     --- Default music client
-    music_player = "alacritty -e ncmpcpp --class music",
+    music_player = "alacritty -e --class music ncmpcpp",
     --- Default text editor
     text_editor = "alacritty -e nvim",
     --- Default code editor
@@ -25,6 +25,12 @@ return {
     power_manager = "xfce4-power-manager",
     --- Default rofi global menu
     app_launcher = "rofi -no-lazy-grab -show drun -modi drun -theme " .. config_dir .. "configuration/rofi.rasi",
+    --- Default emoji picker (using rofi)
+    -- emoji_picker = "rofi -no-lazy-grab -show drun -modi \"emoji:/usr/lib/python3.10/site-packages/picker/rofimoji.py\" -theme "
+    --     ..
+    --     config_dir .. "configuration/rofi.rasi",
+    -- emoji_picker = "rofimoji -theme " .. config_dir .. "configuration/rofi.rasi",
+    emoji_picker = "rofimoji"
   },
 
   --- List of binaries/shell scripts that will execute for a certain task
