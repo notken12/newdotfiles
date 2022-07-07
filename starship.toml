@@ -9,8 +9,8 @@ format = "$all$character"
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character] # The name of the module we are configuring is "character"
-success_symbol = "[](bold blue)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = "[](bold red)"
+success_symbol = "[❯](bold blue)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[❯](bold red)"
 
 
 [aws]
@@ -44,7 +44,7 @@ symbol = " "
 
 [git_branch]
 symbol = " "
-style = "bold #62adfc"
+style = "bold blue"
 format = "[$symbol$branch(:$remote_branch)]($style) "
 
 [golang]
@@ -79,13 +79,13 @@ symbol = " "
 disabled = true
 
 [python]
-symbol = " "
+symbol = "🐍 "
 
 [spack]
 symbol = "🅢 "
 
-# [rust]
-# symbol = " "
+[rust]
+symbol = "🦀 "
 
 [cmd_duration]
-style = "#4274a8 bold"
+style = "cyan bold"
