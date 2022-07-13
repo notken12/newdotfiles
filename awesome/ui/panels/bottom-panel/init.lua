@@ -246,7 +246,7 @@ return function(s)
     minimum_width = s.geometry.width,
     maximum_width = s.geometry.width,
     placement = function(c)
-      awful.placement.bottom(c)
+      awful.placement.top(c)
     end,
     bg = beautiful.transparent,
     widget = {
@@ -275,7 +275,7 @@ return function(s)
   })
 
   s.bottom_panel:struts({
-    bottom = s.bottom_panel.maximum_height,
+    top = s.bottom_panel.maximum_height,
   })
 
   --- Remove bottom_panel on full screen

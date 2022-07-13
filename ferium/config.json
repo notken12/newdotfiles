@@ -73,6 +73,12 @@
           "identifier": {
             "ModrinthProject": "AANobbMI"
           }
+        },
+        {
+          "name": "Terralith",
+          "identifier": {
+            "CurseForgeProject": 513688
+          }
         }
       ]
     }

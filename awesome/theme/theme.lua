@@ -123,17 +123,17 @@ theme.fg_minimize = theme.xcolor0
 
 --- Accent colors
 function theme.random_accent_color()
-	local accents = {
-		theme.xcolor9,
-		theme.xcolor10,
-		theme.xcolor11,
-		theme.xcolor12,
-		theme.xcolor13,
-		theme.xcolor14,
-	}
+  local accents = {
+    theme.xcolor9,
+    theme.xcolor10,
+    theme.xcolor11,
+    theme.xcolor12,
+    theme.xcolor13,
+    theme.xcolor14,
+  }
 
-	local i = math.random(1, #accents)
-	return accents[i]
+  local i = math.random(1, #accents)
+  return accents[i]
 end
 
 theme.accent = theme.xcolor4
@@ -273,10 +273,10 @@ theme.notif_center_notifs_bg_alt = theme.one_bg2
 
 --- Swallowing
 theme.dont_swallow_classname_list = {
-	"firefox",
-	"gimp",
-	"Google-chrome",
-	"Thunar",
+  "firefox",
+  "gimp",
+  "Google-chrome",
+  "Thunar",
 }
 
 --- Layout Machi
