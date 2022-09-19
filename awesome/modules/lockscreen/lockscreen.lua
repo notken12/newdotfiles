@@ -7,13 +7,13 @@ local wibox = require("wibox")
 local helpers = require("helpers")
 local lock_screen = require("modules.lockscreen")
 
--- Word Clock Lock Screen
-----------------
+--- Word Clock Lock Screen
+--- ~~~~~~~~~~~~~~~~~~~~~~
 
 local lock_screen_symbol = ""
 local lock_screen_fail_symbol = ""
 local lock_animation_icon = wibox.widget({
-	-- Set forced size to prevent flickering when the icon rotates
+	--- Set forced size to prevent flickering when the icon rotates
 	forced_height = dpi(80),
 	forced_width = dpi(80),
 	font = beautiful.icon_font .. "Outlined 40",
@@ -28,16 +28,16 @@ lock_screen_box = wibox({ visible = false, ontop = true, type = "splash", screen
 awful.placement.maximize(lock_screen_box)
 
 lock_screen_box.bg = beautiful.transparent
-lock_screen_box.fg = beautiful.xforeground
+lock_screen_box.fg = beautiful.white
 
--- Add lockscreen to each screen
+--- Add lockscreen to each screen
 awful.screen.connect_for_each_screen(function(s)
 	if s == screen.primary then
 		s.mylockscreen = lock_screen_box
 	else
 		s.mylockscreen = helpers.ui.screen_mask(
 			s,
-			beautiful.lock_screen_bg or beautiful.exit_screen_bg or beautiful.xbackground
+			beautiful.lock_screen_bg or beautiful.exit_screen_bg or beautiful.black
 		)
 	end
 end)
@@ -48,9 +48,8 @@ local function set_visibility(v)
 	end
 end
 
--- Word Clock
-----------------
-
+--- Word Clock
+--- ~~~~~~~~~
 local char =
 	"I T L I S A S A M P M A C Q U A R T E R D C T W E N T Y F I V E X H A L F S T E N F T O P A S T E R U N I N E O N E S I X T H R E E F O U R F I V E T W O E I G H T E L E V E N S E V E N T W E L V E T E N S E O C L O C K"
 
@@ -170,7 +169,7 @@ end
 local function activate_word(w)
 	for i, m in pairs(char_map[w]) do
 		local text = m.text
-		m.markup = helpers.ui.colorize_text(text, beautiful.xforeground)
+		m.markup = helpers.ui.colorize_text(text, beautiful.white)
 	end
 end
 
@@ -242,7 +241,7 @@ gears.timer({
 	end,
 })
 
--- Lock animation
+--- Lock animation
 local lock_animation_widget_rotate = wibox.container.rotate()
 
 local arc = function()
@@ -268,7 +267,7 @@ local lock_animation = {
 	layout = wibox.layout.stack,
 }
 
--- Lock helper functions
+--- Lock helper functions
 local characters_entered = 0
 local function reset()
 	characters_entered = 0
@@ -285,18 +284,18 @@ local function fail()
 end
 
 local animation_colors = {
-	-- Rainbow sequence =)
-	beautiful.xcolor1,
-	beautiful.xcolor5,
-	beautiful.xcolor4,
-	beautiful.xcolor6,
-	beautiful.xcolor2,
-	beautiful.xcolor3,
+	--- Rainbow sequence
+	beautiful.color1,
+	beautiful.color5,
+	beautiful.color4,
+	beautiful.color6,
+	beautiful.color2,
+	beautiful.color3,
 }
 
 local animation_directions = { "north", "west", "south", "east" }
 
--- Function that "animates" every key press
+--- Function that "animates" every key press
 local function key_animation(char_inserted)
 	local color
 	local direction = animation_directions[(characters_entered % 4) + 1]
@@ -307,7 +306,7 @@ local function key_animation(char_inserted)
 		if characters_entered == 0 then
 			reset()
 		else
-			color = beautiful.xcolor7 .. "55"
+			color = beautiful.color7 .. "55"
 		end
 	end
 
@@ -315,12 +314,12 @@ local function key_animation(char_inserted)
 	lock_animation_widget_rotate.direction = direction
 end
 
--- Get input from user
+--- Get input from user
 local function grab_password()
 	awful.prompt.run({
 		hooks = {
-			-- Custom escape behaviour: Do not cancel input with Escape
-			-- Instead, this will just clear any input received so far.
+			--- Custom escape behaviour: Do not cancel input with Escape
+			--- Instead, this will just clear any input received so far.
 			{
 				{},
 				"Escape",
@@ -329,7 +328,7 @@ local function grab_password()
 					grab_password()
 				end,
 			},
-			-- Fix for Control+Delete crashing the keygrabber
+			--- Fix for Control+Delete crashing the keygrabber
 			{
 				{ "Control" },
 				"Delete",
@@ -340,8 +339,7 @@ local function grab_password()
 			},
 		},
 		keypressed_callback = function(mod, key, cmd)
-			-- Only count single character keys (thus preventing
-			-- "Shift", "Escape", etc from triggering the animation)
+			--- Only count single character keys (thus preventing "Shift", "Escape", etc from triggering the animation)
 			if #key == 1 then
 				characters_entered = characters_entered + 1
 				key_animation(true)
@@ -353,13 +351,13 @@ local function grab_password()
 			end
 		end,
 		exe_callback = function(input)
-			-- Check input
+			--- Check input
 			if lock_screen.authenticate(input) then
-				-- YAY
+				--- YAY
 				reset()
 				set_visibility(false)
 			else
-				-- NAY
+				--- NAY
 				fail()
 				grab_password()
 			end
@@ -374,10 +372,10 @@ function lock_screen_show()
 end
 
 lock_screen_box:setup({
-	-- Horizontal centering
+	--- Horizontal centering
 	nil,
 	{
-		-- Vertical centering
+		--- Vertical centering
 		nil,
 		{
 			helpers.ui.vertical_pad(dpi(20)),

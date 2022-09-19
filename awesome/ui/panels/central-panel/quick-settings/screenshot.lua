@@ -6,6 +6,9 @@ local gears = require("gears")
 local widgets = require("ui.widgets")
 local apps = require("configuration.apps")
 
+--- Screenshot Widget
+--- ~~~~~~~~~~~~~~~~~
+
 local screenshot = {}
 
 local function button(icon, command)

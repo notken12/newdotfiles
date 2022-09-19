@@ -6,7 +6,6 @@
 
 pcall(require, "luarocks.loader")
 local gears = require("gears")
-local awful = require("awful")
 local beautiful = require("beautiful")
 
 --- ░▀█▀░█░█░█▀▀░█▄█░█▀▀
@@ -28,12 +27,6 @@ require("configuration")
 
 require("modules")
 
---- ░█▀▄░█▀█░█▀▀░█▄█░█▀█░█▀█░█▀▀
---- ░█░█░█▀█░█▀▀░█░█░█░█░█░█░▀▀█
---- ░▀▀░░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░▀░▀▀▀
-
-require("signal")
-
 --- ░█░█░▀█▀
 --- ░█░█░░█░
 --- ░▀▀▀░▀▀▀
@@ -48,10 +41,10 @@ require("ui")
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
 gears.timer({
-  timeout = 5,
-  autostart = true,
-  call_now = true,
-  callback = function()
-    collectgarbage("collect")
-  end,
+	timeout = 5,
+	autostart = true,
+	call_now = true,
+	callback = function()
+		collectgarbage("collect")
+	end,
 })

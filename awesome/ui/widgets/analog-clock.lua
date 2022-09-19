@@ -1,17 +1,11 @@
--- Standard awesome library
 local gears = require("gears")
 local wibox = require("wibox")
 local math = require("math")
-
--- Theme handling library
 local beautiful = require("beautiful")
-
--- C libraries
 local cairo = require("lgi").cairo
 
--- Analog clock
-------------------
--- Stolen from No37
+--- Analog clock
+--- ~~~~~~~~~~~~
 
 local function create_minute_pointer(minute)
 	local img = cairo.ImageSurface(cairo.Format.ARGB32, 1000, 1000)
@@ -20,7 +14,7 @@ local function create_minute_pointer(minute)
 	cr:translate(500, 500)
 	cr:rotate(angle)
 	cr:translate(-500, -500)
-	cr:set_source(gears.color(beautiful.xforeground))
+	cr:set_source(gears.color(beautiful.white))
 	cr:rectangle(485, 100, 30, 420)
 	cr:fill()
 	return img

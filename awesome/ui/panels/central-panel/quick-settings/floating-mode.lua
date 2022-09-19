@@ -4,6 +4,9 @@ local beautiful = require("beautiful")
 local dpi = beautiful.xresources.apply_dpi
 local widgets = require("ui.widgets")
 
+--- Floating-Mode Widget
+--- ~~~~~~~~~~~~~~~~~~~~
+
 local floating_mode_state = false
 
 local function button(icon)

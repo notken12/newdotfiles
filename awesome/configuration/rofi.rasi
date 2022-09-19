@@ -1,5 +1,5 @@
 configuration {
-    font:           				"SF Mono 10";
+    font:           				"Roboto Medium 10";
     show-icons:                     true;
 	icon-theme: 					"WhiteSur-dark";
     display-drun: 					"";
@@ -11,10 +11,10 @@ configuration {
 }
 
 * {
-    BG:                             #06111566;
-    BGA:                            #06111566;
-    FG:                             #D9D7D6ff;
-    UGT:                            #DF5B61ff;
+    BG:                             #10121399;
+    BGA:                            #101213;
+    FG:                             #edeff0ff;
+    UGT:                            #df5b61ff;
 }
 
 window {
@@ -24,7 +24,7 @@ window {
     border-radius:                  8px;
     width:                          700px;
     x-offset:                       0;
-    y-offset:                       -45px;
+    y-offset:                       -4.3%;
 }
 
 prompt {
@@ -49,7 +49,7 @@ entry {
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Type here to search";
-    font:							"SF Mono Bold 12";
+    font:							"Roboto Bold 12";
     blink:                          true;
     padding:                        10px;
 }
@@ -97,7 +97,7 @@ element {
 }
 
 element-icon {
-    background-color: 				#00000000;
+    background-color: 				inherit;
     text-color:       				inherit;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
@@ -105,7 +105,7 @@ element-icon {
 }
 
 element-text {
-    background-color: 				#00000000;
+    background-color: 				inherit;
     text-color:       				inherit;
     expand:                         true;
     horizontal-align:               0.5;
@@ -137,6 +137,6 @@ element selected.urgent {
 }
 
 element selected.active {
-    background-color:               #00000000;
+    background-color:               @BGA;
     color:                          @FG;
 }

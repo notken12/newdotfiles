@@ -8,6 +8,9 @@ local widget_dir = config_dir .. "ui/panels/central-panel/quick-settings/bluetoo
 local widget_icon_dir = widget_dir .. "icons/"
 local widgets = require("ui.widgets")
 
+--- Bluetooth Widget
+--- ~~~~~~~~~~~~~~~~
+
 local bluetooth_state = false
 
 local function button(icon)

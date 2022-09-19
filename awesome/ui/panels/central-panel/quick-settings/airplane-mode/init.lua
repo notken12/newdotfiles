@@ -7,6 +7,9 @@ local widget_dir = config_dir .. "ui/panels/central-panel/quick-settings/airplan
 local widget_icon_dir = widget_dir .. "icons/"
 local widgets = require("ui.widgets")
 
+--- Airplane-Mode Widget
+--- ~~~~~~~~~~~~~~~~~~~~
+
 local airplane_mode_state = false
 
 local function button(icon)

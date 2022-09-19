@@ -4,6 +4,9 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 local apps = require("configuration.apps")
 local focused = awful.screen.focused()
 
+--- Beautiful right-click menu
+--- ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 local instance = nil
 
 local function awesome_menu()

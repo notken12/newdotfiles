@@ -4,6 +4,9 @@ local dpi = xresources.apply_dpi
 local wibox = require("wibox")
 local helpers = require("helpers")
 
+--- Quick Settings
+--- ~~~~~~~~~~~~~~
+
 local quick_settings_text = wibox.widget({
 	font = beautiful.font_name .. "Medium 10",
 	markup = helpers.ui.colorize_text("Quick Settings", "#666c79"),
@@ -11,8 +14,7 @@ local quick_settings_text = wibox.widget({
 	widget = wibox.widget.textbox,
 })
 
---- Buttons
---- ~~~~~~~
+--- Widgets
 local airplane_mode = require(... .. ".airplane-mode")
 local bluetooth = require(... .. ".bluetooth")
 local blue_light = require(... .. ".blue-light")
@@ -22,7 +24,7 @@ local floating_mode = require(... .. ".floating-mode")
 local screenshot_area = require(... .. ".screenshot").area
 local screenshot_full = require(... .. ".screenshot").full
 
--- 4x4 grid of button
+--- 4x4 grid of button
 local buttons = wibox.widget({
 	airplane_mode,
 	blue_light,

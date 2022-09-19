@@ -4,6 +4,9 @@ local beautiful = require("beautiful")
 local dpi = beautiful.xresources.apply_dpi
 local widgets = require("ui.widgets")
 
+--- Blue-Light Widget
+--- ~~~~~~~~~~~~~~~~~
+
 local blue_light_state = false
 
 local function button(icon)

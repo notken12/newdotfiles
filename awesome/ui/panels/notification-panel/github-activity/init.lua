@@ -16,6 +16,9 @@ local os = os
 local widget_dir = gfs.get_configuration_dir() .. "ui/panels/notification-panel/github-activity"
 local icons_dir = widget_dir .. "/icons/"
 
+--- Github Activity Widget
+--- ~~~~~~~~~~~~~~~~~~~~~~
+
 local github = { mt = {} }
 
 local function generate_action_string(event)
@@ -56,7 +59,7 @@ local function widget()
 		widgets.text({
 			halign = "center",
 			size = 25,
-			color = beautiful.xcolor1,
+			color = beautiful.color1,
 			text = "Missing Credentials",
 		}),
 	})
@@ -69,13 +72,13 @@ local function widget()
 			widgets.text({
 				halign = "center",
 				size = 125,
-				color = beautiful.xcolor3,
+				color = beautiful.color3,
 				font = "Material Icons Round ",
 				text = "",
 			}),
 			widgets.text({
 				halign = "center",
-				color = beautiful.xcolor3,
+				color = beautiful.color3,
 				text = "Error",
 				bold = true,
 			}),
@@ -133,7 +136,7 @@ local function github_activity()
 
 			local avatar = widgets.button.elevated.normal({
 				paddings = dpi(5),
-				normal_bg = beautiful.wibar_bg,
+				normal_bg = beautiful.widget_bg,
 				child = {
 					widget = wibox.widget.imagebox,
 					forced_width = dpi(40),
@@ -148,7 +151,7 @@ local function github_activity()
 
 			local repo_info = widgets.button.elevated.normal({
 				paddings = dpi(5),
-				normal_bg = beautiful.wibar_bg,
+				normal_bg = beautiful.widget_bg,
 				halign = "left",
 				child = {
 					{

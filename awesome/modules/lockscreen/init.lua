@@ -1,4 +1,3 @@
-local awful = require("awful")
 local gfs = require("gears.filesystem")
 
 local lock_screen = {}
@@ -10,7 +9,7 @@ lock_screen.init = function()
 	local pam = require("liblua_pam")
 	lock_screen.authenticate = function(password)
 		return pam.auth_current_user(password)
-		-- return password == "awesome"
+		--- return password == "awesome"
 	end
 	require("modules.lockscreen.lockscreen")
 end

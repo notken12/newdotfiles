@@ -7,6 +7,9 @@ local config_dir = gears.filesystem.get_configuration_dir()
 local widget_dir = config_dir .. "ui/panels/central-panel/quick-settings/dnd/"
 local widgets = require("ui.widgets")
 
+--- Do not Disturb Widget
+--- ~~~~~~~~~~~~~~~~~~~~~
+
 _G.dnd_state = false
 
 local function button(icon)

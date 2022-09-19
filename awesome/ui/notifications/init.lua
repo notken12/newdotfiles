@@ -9,8 +9,8 @@ local menubar = require("menubar")
 local animation = require("modules.animation")
 local widgets = require("ui.widgets")
 
---  Naughty Notifications with animation
--- -------------------------------------
+--- Naughty Notifications with animation
+--- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 naughty.persistence_enabled = true
 naughty.config.defaults.ontop = true
@@ -25,18 +25,18 @@ local function get_oldest_notification()
 		end
 	end
 
-	-- Fallback to first one.
+	--- Fallback to first one.
 	return naughty.active[1]
 end
 
--- Handle notification icon
+--- Handle notification icon
 naughty.connect_signal("request::icon", function(n, context, hints)
-	-- Handle other contexts here
+	--- Handle other contexts here
 	if context ~= "app_icon" then
 		return
 	end
 
-	-- Use XDG icon
+	--- Use XDG icon
 	local path = menubar.utils.lookup_icon(hints.app_icon) or menubar.utils.lookup_icon(hints.app_icon:lower())
 
 	if path then
@@ -44,16 +44,16 @@ naughty.connect_signal("request::icon", function(n, context, hints)
 	end
 end)
 
--- Use XDG icon
+--- Use XDG icon
 naughty.connect_signal("request::action_icon", function(a, context, hints)
 	a.icon = menubar.utils.lookup_icon(hints.id)
 end)
 
 naughty.connect_signal("request::display", function(n)
-	-- random accent color
+	--- random accent color
 	local accent_colors = beautiful.random_accent_color()
 
-	-- table of icons
+	--- table of icons
 	local app_icons = {
 		["firefox"] = { icon = "" },
 		["discord"] = { icon = "" },
@@ -230,7 +230,7 @@ naughty.connect_signal("request::display", function(n)
 		notification = n,
 		type = "notification",
 		cursor = "hand2",
-		-- For antialiasing: The real shape is set in widget_template
+		--- For antialiasing: The real shape is set in widget_template
 		shape = gears.shape.rectangle,
 		maximum_width = dpi(350),
 		maximum_height = dpi(180),
@@ -286,14 +286,14 @@ naughty.connect_signal("request::display", function(n)
 					widget = wibox.container.margin,
 				},
 			},
-			-- Anti-aliasing container
+			--- Anti-aliasing container
 			shape = helpers.ui.rrect(beautiful.border_radius),
 			bg = beautiful.notification_bg,
 			widget = wibox.container.background,
 		},
 	})
 
-	-- Don't destroy the notification on click
+	--- Don't destroy the notification on click
 	widget.buttons = {}
 
 	local anim = animation:new({
@@ -311,7 +311,7 @@ naughty.connect_signal("request::display", function(n)
 	end)
 
 	widget:connect_signal("mouse::enter", function()
-		-- Absurdly big number because setting it to 0 doesn't work
+		--- Absurdly big number because setting it to 0 doesn't work
 		n:set_timeout(4294967)
 		anim:stop()
 	end)
@@ -329,7 +329,7 @@ naughty.connect_signal("request::display", function(n)
 
 	anim:start()
 
-	-- Destroy popups notifs if dont_disturb mode is on
+	--- Destroy popups notifs if dont_disturb mode is on
 	if _G.dnd_state then
 		naughty.destroy_all_notifications(nil, 1)
 	end
