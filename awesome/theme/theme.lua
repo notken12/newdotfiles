@@ -55,8 +55,8 @@ theme.color2 = "#78b892"
 theme.color10 = "#81c19b"
 
 --- Yellow
-theme.color3 = "#de8f78"
-theme.color11 = "#e79881"
+theme.color3 = "#e0af68"
+theme.color11 = "#EBCB8B"
 
 --- Blue
 theme.color4 = "#6791c9"
@@ -88,17 +88,17 @@ theme.fg_minimize = theme.color0
 
 --- Accent colors
 function theme.random_accent_color()
-	local accents = {
-		theme.color9,
-		theme.color10,
-		theme.color11,
-		theme.color12,
-		theme.color13,
-		theme.color14,
-	}
+  local accents = {
+    theme.color9,
+    theme.color10,
+    theme.color11,
+    theme.color12,
+    theme.color13,
+    theme.color14,
+  }
 
-	local i = math.random(1, #accents)
-	return accents[i]
+  local i = math.random(1, #accents)
+  return accents[i]
 end
 
 theme.accent = theme.color4
@@ -157,10 +157,12 @@ theme.music_accent = theme.lighter_black
 --- ░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀
 
 --- Wallpapers
-theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wave.png")
---- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/yoru-dots.png")
---- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/mountain.jpg")
---- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/rocks.jpg")
+-- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wave.png")
+-- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/yoru-dots.png")
+-- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/mountain.jpg")
+-- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/rocks.jpg")
+theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wave-pattern-1.png")
+-- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wave-pattern-2.png")
 
 --- Image Assets
 theme.pfp = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/pfp.png")
@@ -275,10 +277,10 @@ theme.notif_center_notifs_bg_alt = theme.one_bg3
 
 --- Swallowing
 theme.dont_swallow_classname_list = {
-	"firefox",
-	"gimp",
-	"Google-chrome",
-	"Thunar",
+  "firefox",
+  "gimp",
+  "Google-chrome",
+  "Thunar",
 }
 
 --- Layout Machi
