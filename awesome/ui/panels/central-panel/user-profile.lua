@@ -58,7 +58,7 @@ local function widget()
     {
       {
         {
-          -- image = beautiful.pfp,
+          image = beautiful.pfp,
           resize = true,
           clip_shape = gears.shape.circle,
           halign = "center",

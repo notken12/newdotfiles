@@ -7,7 +7,7 @@ local widgets = require("ui.widgets")
 --- Blue-Light Widget
 --- ~~~~~~~~~~~~~~~~~
 
-local blue_light_state = false
+local blue_light_state = true
 
 local function button(icon)
   return widgets.button.text.state({
@@ -36,16 +36,21 @@ end
 
 local kill_state = function()
   awful.spawn.easy_async_with_shell(
+  --   [[
+  -- redshift -x
+  -- kill -9 $(pgrep redshift)
+  -- ]] ,
     [[
-		redshift -x
 		kill -9 $(pgrep redshift)
+		redshift -x && pkill redshift && killall redshift
+		redshift -l 0:0 -t 4500:4500 -r &>/dev/null
 		]] ,
     function(stdout)
       stdout = tonumber(stdout)
       if stdout then
-        blue_light_state = false
-        update_widget()
+        blue_light_state = true
       end
+      update_widget()
     end
   )
 end
@@ -74,6 +79,10 @@ local toggle_action = function()
     end
   )
 end
+
+update_widget()
+
+-- awful.spawn.easy_async_with_shell([[redshift -l 0:0 -t 4500:4500 -r &>/dev/null]])
 
 widget:buttons(gears.table.join(awful.button({}, 1, nil, function()
   toggle_action()

@@ -49,14 +49,19 @@ return {
   disable_default_key_bindings = true,
   keys = {
     {
-      key = [[\]],
+      key = "w",
+      mods = "CTRL|ALT",
+      action = wezterm.action.CloseCurrentPane({ confirm = true }),
+    },
+    {
+      key = [[/]],
       mods = "CTRL|ALT",
       action = wezterm.action({
         SplitHorizontal = { domain = "CurrentPaneDomain" },
       }),
     },
     {
-      key = [[\]],
+      key = [[/]],
       mods = "CTRL",
       action = wezterm.action({
         SplitVertical = { domain = "CurrentPaneDomain" },
