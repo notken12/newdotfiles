@@ -852,7 +852,7 @@ body {
 .markdown-section code,
 .markdown-section pre,
 .markdown-section output::after {
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  font-family: 'SF Pro','Roboto Mono', Monaco, courier, monospace;
 }
 
 .markdown-section code,

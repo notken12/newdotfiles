@@ -1,5 +1,5 @@
 configuration {
-    font:           				"Roboto Medium 10";
+    font:           				"SF Pro Medium 10";
     show-icons:                     true;
 	icon-theme: 					"WhiteSur-dark";
     display-drun: 					"";
@@ -49,7 +49,7 @@ entry {
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Type here to search";
-    font:							"Roboto Bold 12";
+    font:							"SF Pro Bold 12";
     blink:                          true;
     padding:                        10px;
 }

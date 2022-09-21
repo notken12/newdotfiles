@@ -17,7 +17,7 @@ local icons = require("icons")
 --- ░▀░░░▀▀▀░▀░▀░░▀░░▀▀▀
 
 --- Ui Fonts
-theme.font_name = "Roboto "
+theme.font_name = "SF Pro "
 theme.font = theme.font_name .. "Medium 10"
 
 --- Icon Fonts
@@ -114,7 +114,7 @@ theme.widget_bg = "#1b1d1e"
 
 --- Titlebars
 theme.titlebar_enabled = true
-theme.titlebar_bg = theme.black
+theme.titlebar_bg = theme.black .. "55"
 theme.titlebar_fg = theme.white
 
 local icon_dir = gfs.get_configuration_dir() .. "/icons/titlebar/"
@@ -157,11 +157,11 @@ theme.music_accent = theme.lighter_black
 --- ░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀
 
 --- Wallpapers
--- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wave.png")
+theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wave.png")
 -- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/yoru-dots.png")
 -- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/mountain.jpg")
 -- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/rocks.jpg")
-theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wave-pattern-1.png")
+-- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wave-pattern-1.png")
 -- theme.wallpaper = gears.surface.load_uncached(gfs.get_configuration_dir() .. "theme/assets/wave-pattern-2.png")
 
 --- Image Assets

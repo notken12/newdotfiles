@@ -10,9 +10,9 @@ return {
     --- Default music client
     music_player = "wezterm start --class music ncmpcpp",
     --- Default text editor
-    text_editor = "wezterm start nvim",
+    text_editor = "neovide",
     --- Default code editor
-    code_editor = "wezterm start nvim",
+    code_editor = "neovide",
     --- Default web browser
     web_browser = "google-chrome-stable",
     --- Default file manager
